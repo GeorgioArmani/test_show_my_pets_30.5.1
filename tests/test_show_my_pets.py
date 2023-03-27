@@ -32,6 +32,5 @@ def test_show_my_pets():
    # Клик по ссылке "Мои питомцы"
    pytest.driver.find_element(By.LINK_TEXT, 'Мои питомцы').click()
 
-
    # Проверка того, что переход на страницу "Мои питомцы" осуществлен
    assert pytest.driver.current_url == 'https://petfriends.skillfactory.ru/all_pets'
