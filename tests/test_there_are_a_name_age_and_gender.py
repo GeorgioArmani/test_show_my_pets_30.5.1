@@ -3,6 +3,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 
+
 def test_there_are_a_name_age_and_gender(go_to_my_pets):
    '''Поверка того, что на странице "Мои питомцы" у всех питомцев есть имя, возраст и порода'''
 
