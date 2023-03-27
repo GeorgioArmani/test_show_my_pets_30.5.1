@@ -14,7 +14,8 @@ def test_all_pets_have_different_names(go_to_my_pets):
    # Сохранение элементов с данными о питомцах в переменную "pet_data"
    pet_data = pytest.driver.find_elements(By.CSS_SELECTOR, '.table.table-hover tbody tr')
 
-   # Перебираются данные из переменной "pet_data". Сохраняются имя, возраст и порода, остальное меняется на пустую строку и разделяется по пробелу
+   # Перебираются данные из переменной "pet_data"
+   # Сохраняются имя, возраст и порода, остальное меняется на пустую строку и разделяется по пробелу
    # Выбираются имена и добавляются в список "pets_name"
    pets_name = []
    for i in range(len(pet_data)):
