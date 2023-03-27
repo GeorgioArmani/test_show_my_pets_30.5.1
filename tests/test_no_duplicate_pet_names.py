@@ -14,14 +14,16 @@ def test_no_duplicate_pet_names(go_to_my_pets):
     # Сохранение элементов с данными о питомцах в переменную "pet_data"
     pet_data = pytest.driver.find_elements(By.CSS_SELECTOR, '.table.table-hover tbody tr')
 
-    # Перебираются данные из переменной "pet_data". Сохраняются имя, возраст и порода, остальное меняется на пустую строку и разделяется по пробелу
+    # Перебираются данные из переменной "pet_data"
+    # Сохраняются имя, возраст и порода, остальное меняется на пустую строку и разделяется по пробелу
     list_data = []
     for i in range(len(pet_data)):
         data_pet = pet_data[i].text.replace('\n', '').replace('×', '')
         split_data_pet = data_pet.split(' ')
         list_data.append(split_data_pet)
 
-    # Склеиваются имя, возраст и порода. Получившиеся склееные слова добавляются в строку и между ними вставляется пробел
+    # Склеиваются имя, возраст и порода
+    # Получившиеся склееные слова добавляются в строку и между ними вставляется пробел
     line = ''
     for i in list_data:
         line += ''.join(i)
