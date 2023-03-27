@@ -12,7 +12,7 @@ def test_show_pet_friends():
     # Установка неявного ожидания
     pytest.driver.implicitly_wait(10)
 
-    # Ввод электронной почты
+    # Ввод эл.почты
     pytest.driver.find_element(By.ID, 'email').send_keys(valid_email)
 
     # Ввод пароля
