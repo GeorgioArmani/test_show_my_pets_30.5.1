@@ -1,4 +1,5 @@
 # ЗАДАНИЕ 30.5.1
+# ЯВНЫЕ ОЖИДАНИЯ
 
 import pytest
 from selenium.webdriver.support import expected_conditions as EC
