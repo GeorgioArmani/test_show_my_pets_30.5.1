@@ -24,7 +24,7 @@ def go_to_my_pets():
    element = WebDriverWait(pytest.driver, 10).until(
       EC.presence_of_element_located((By.ID, 'email')))
    
-   # Ввод электронной почты
+   # Ввод эл.почты
    pytest.driver.find_element(By.ID, 'email').send_keys(valid_email)
 
    # Установка явного ожидания
