@@ -9,25 +9,29 @@ def test_show_my_pets():
    '''Проверка того, что переход на страницу "Мои питомцы" осуществляется'''
 
    # Установка явного ожидания
-   element = WebDriverWait(pytest.driver, 10).until(EC.presence_of_element_located((By.ID, 'email')))
+   element = WebDriverWait(pytest.driver, 10).until(
+      EC.presence_of_element_located((By.ID, 'email')))
     
    # Ввод электронной почты
    pytest.driver.find_element(By.ID, 'email').send_keys(valid_email)
 
    # Установка явного ожидания
-   element = WebDriverWait(pytest.driver, 10).until(EC.presence_of_element_located((By.ID, 'pass')))
+   element = WebDriverWait(pytest.driver, 10).until(
+      EC.presence_of_element_located((By.ID, 'pass')))
     
    # Ввод пароля
    pytest.driver.find_element(By.ID, 'pass').send_keys(valid_password)
 
    # Установка явного ожидания 
-   element = WebDriverWait(pytest.driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, "button[type='submit']")))
+   element = WebDriverWait(pytest.driver, 10).until(
+      EC.presence_of_element_located((By.CSS_SELECTOR, "button[type='submit']")))
     
    # Клик по кнопке "Войти"
    pytest.driver.find_element(By.CSS_SELECTOR, 'button[type="submit"]').click()
 
    # Установка явного ожидания 
-   element = WebDriverWait(pytest.driver, 10).until(EC.presence_of_element_located((By.LINK_TEXT, 'Мои питомцы')))
+   element = WebDriverWait(pytest.driver, 10).until(
+      EC.presence_of_element_located((By.LINK_TEXT, 'Мои питомцы')))
     
    # Клик по ссылке "Мои питомцы"
    pytest.driver.find_element(By.LINK_TEXT, 'Мои питомцы').click()
