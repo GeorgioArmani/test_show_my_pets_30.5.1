@@ -1,7 +1,8 @@
 import pytest
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.common.by import By
+
 
 def test_all_pets_are_present(go_to_my_pets):
    '''Проверка того, что на странице "Мои питомцы" присутствуют все питомцы'''
