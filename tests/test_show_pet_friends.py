@@ -1,6 +1,7 @@
 import pytest
 from settings import valid_email, valid_password
 
+
 def test_show_pet_friends():
    '''Проверка карточек питомцев'''
 
