@@ -8,7 +8,8 @@ def test_there_are_a_name_age_and_gender(go_to_my_pets):
    '''Поверка того, что на странице "Мои питомцы" у всех питомцев есть имя, возраст и порода'''
 
    # Установка явного ожидания
-   element = WebDriverWait(pytest.driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, '.table.table-hover tbody tr')))
+   element = WebDriverWait(pytest.driver, 10).until(
+      EC.presence_of_element_located((By.CSS_SELECTOR, '.table.table-hover tbody tr')))
    
    # Сохранение элементов с данными о питомцах в переменную "pet_data" 
    pet_data = pytest.driver.find_elements(By.CSS_SELECTOR, '.table.table-hover tbody tr')
