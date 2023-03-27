@@ -7,7 +7,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 
 
-def test_no_duplicate_pet_names(go_to_my_pets):
+def test_no_duplicate_pets(go_to_my_pets):
     '''Проверка того, что на странице "Мои питомцы" нет повторяющихся имен питомцев'''
 
     # Установка явного ожидания
