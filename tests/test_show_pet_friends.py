@@ -1,4 +1,5 @@
 # ЗАДАНИЕ 30.5.1
+# НЕЯВНЫЕ ОЖИДАНИЯ
 
 import pytest
 from selenium.webdriver.common.by import By
