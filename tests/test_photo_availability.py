@@ -7,9 +7,11 @@ from selenium.webdriver.common.by import By
 def test_photo_availability(go_to_my_pets):
    '''Поверка того, что на странице "Мои питомцы" хотя бы у половины питомцев есть фото'''
 
-   # Сохранение элементов статистики в переменную "statistic"
+   # Установка явного ожидания
    element = WebDriverWait(pytest.driver, 10).until(
       EC.presence_of_element_located((By.CSS_SELECTOR, '.\\.col-sm-4.left')))
+   
+   # Сохранение элементов статистики в переменную "statistic"
    statistic = pytest.driver.find_elements(By.CSS_SELECTOR, '.\\.col-sm-4.left')
 
    # Сохранение элементов с атрибутом "img" в переменную "images"
