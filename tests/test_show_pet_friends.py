@@ -7,7 +7,8 @@ from settings import valid_email, valid_password
 
 
 def test_show_pet_friends():
-    '''Проверка карточек питомцев'''
+    '''Проверка карточек питомцев всех пользователей
+    на наличие фото, имени и описания (порода и возраст)'''
 
     # Установка неявного ожидания
     pytest.driver.implicitly_wait(10)
