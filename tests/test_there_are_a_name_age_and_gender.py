@@ -8,7 +8,7 @@ from selenium.webdriver.common.by import By
 
 
 def test_there_are_a_name_age_and_gender(go_to_my_pets):
-   '''Поверка того, что на странице "Мои питомцы" у всех питомцев есть имя, возраст и порода'''
+   '''Поверка того, что на странице "Мои питомцы" у всех питомцев есть фото, имя, возраст и порода'''
 
    # Установка явного ожидания
    element = WebDriverWait(pytest.driver, 10).until(
@@ -24,4 +24,4 @@ def test_there_are_a_name_age_and_gender(go_to_my_pets):
       data_pet = pet_data[i].text.replace('\n', '').replace('×', '')
       split_data_pet = data_pet.split(' ')
       result = len(split_data_pet)
-      assert result == 3
+      assert result == 4
